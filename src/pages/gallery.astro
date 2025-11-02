@@ -1,0 +1,44 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+title: 'Gallery';
+---
+
+<MainLayout>
+  <div class="gallery-intro">
+    <h1>Gallery</h1>
+    <p>Welcome to our gallery! Browse through our collection of images below.</p>
+  </div>
+  <div class="gallery-grid">
+    <img src="/images/photo-1.jpg" alt="Photo 1">
+    <img src="/images/photo-2.jpg" alt="Photo 2">
+    <img src="/images/photo-3.jpg" alt="Photo 3">
+  </div>
+</MainLayout>
+
+<style>
+  .gallery-intro {
+    text-align: center;
+    margin: 2rem 0;
+    h1 {
+      font-family: 'Oswald', sans-serif;
+    }
+  }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+    padding: 1rem;
+  }
+  .gallery-grid img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Ensures the images are square */
+    object-fit: cover; /* Ensures the image fills the square without distortion */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  }
+</style>
