@@ -26,20 +26,21 @@ title: 'Gallery';
   }
   .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: 1fr; /* Default: one image per row */
     gap: 16px;
     padding: 1rem;
   }
+  @media screen and (min-width: 768px) {
+    .gallery-grid {
+      grid-template-columns: repeat(2, 1fr); /* Two images per row on desktop */
+    }
+  }
   .gallery-grid img {
-    width: 100%;
-    aspect-ratio: 1 / 1; /* Ensures the images are square */
-    object-fit: cover; /* Ensures the image fills the square without distortion */
+    width: 100%; /* Ensures the image fills the column width */
+    height: auto; /* Maintains the aspect ratio */
+    object-fit: cover; /* Ensures the image fills the space without distortion */
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  .gallery-grid img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
   }
 </style>
