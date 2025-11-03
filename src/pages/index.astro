@@ -8,7 +8,7 @@ title: 'Home';
   <div class="banner">
     <img src="/images/photo-3.jpg" alt="Cornwall Pond" />
     <div class="banner-text">
-      <h2>Professional Pond Cleaning Services in Cornwall</h2>
+      <h2>Professional Pond Care Services in Cornwall</h2>
     </div>
   </div>
 
@@ -19,7 +19,7 @@ title: 'Home';
   </section>
 
   <section class="services">
-    <h2>Our Services</h2>
+    <h2>My Services</h2>
     <div class="services-grid">
       <div class="service-item">
         <i class="fas fa-tools"></i>
@@ -48,9 +48,23 @@ title: 'Home';
     </div>
   </section>
 
+  <section class="before-after">
+    <h2>Before & After</h2>
+    <div class="before-after-container">
+      <div class="before">
+        <h3>Before</h3>
+        <img src="/images/image2-before.jpg" alt="Before Pond Cleaning">
+      </div>
+      <div class="after">
+        <h3>After</h3>
+        <img src="/images/image2-after.jpg" alt="After Pond Cleaning">
+      </div>
+    </div>
+  </section>
+
   <section class="links">
-    <a href="/gallery" class="button">Visit our Gallery</a>
-    <a href="/contact" class="button">Contact Us</a>
+    <a href="/gallery" class="button">Visit my Gallery</a>
+    <a href="/contact" class="button">Contact Me</a>
   </section>
 </MainLayout>
 
@@ -122,6 +136,36 @@ title: 'Home';
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
     color: #333;
+  }
+  .before-after {
+    padding: 2rem;
+    background-color: #fff;
+    text-align: center;
+  }
+  .before-after h2 {
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 1rem;
+  }
+  .before-after-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+  }
+  .before, .after {
+    flex: 1;
+    text-align: center;
+  }
+  .before img, .after img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .before img:hover, .after img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
   }
   .links {
     display: flex;
